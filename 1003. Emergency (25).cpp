@@ -17,7 +17,7 @@ int t[501] = {0};
 int Maxt = 0,short_long = 10000,short_num = 0;
 using namespace std;
 void dfs(int s,int k,int team){
-	//cout << s << k << team << endl;
+	cout << "******"<<endl; 
 	if(k > short_long)return;
 	if(s == en ){
 		if(k < short_long){
@@ -32,9 +32,6 @@ void dfs(int s,int k,int team){
 	}
 	vis[s] = 1;
 	for(int i = 0 ; i < n ; i++){
-		/*cout << "****"<<endl;
-		cout<<w[s][i]<<endl;
-		cout<<vis[i]<<endl;*/
 		if(vis[i] == 0 && w[s][i]>0){	
 			dfs(i,k+w[s][i],team+t[i]);
 		}
