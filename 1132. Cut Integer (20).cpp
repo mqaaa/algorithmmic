@@ -29,7 +29,8 @@ int main(){
 		}
 		temp1 = a/t;
 		temp2 = a%t;
-		if(a%(temp1*temp2)==0)cout<<"Yes"<<endl;
+                if(temp1==0||temp2==0)cout<<"No"<<endl;
+		else if(a%(temp1*temp2)==0)cout<<"Yes"<<endl;
 		else cout <<"No"<<endl;
 	} 
 	return 0;
