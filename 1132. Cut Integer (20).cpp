@@ -34,5 +34,5 @@ int main(){
 		else cout <<"No"<<endl;
 	} 
 	return 0;
-}
+} 
 	
