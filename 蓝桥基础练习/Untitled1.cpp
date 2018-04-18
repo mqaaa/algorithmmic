@@ -1,18 +1,21 @@
 #include <iostream>
-#include <string>
 using namespace std;
-void func(string str , int k){
-	if(k==5){
-		cout << str<<endl;
-		return;
+
+int i = 0;
+int fun(int n)
+{
+	static int k=2;
+	k++
+	return (++k)*(n++);
+}
+int main()
+{
+	int k=5;
+	{
+		int i = 2;
+		k+=fun(i);
 	}
-	str[k]='0';
-	func(str,k+1);
-	str[k]='1';
-	func(str,k+1);	
-}
-int main(){
-	string str="00000";
-	func(str,0);
+	k+=fun(i);
+	cout<<k<<endl;
 	return 0;
-}
+} 
